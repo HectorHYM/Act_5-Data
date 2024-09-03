@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #222222;
+}
+
+.lexend-semibold{
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #444444;
+    padding: 60px;
+    border-radius: 8px;
+}
+
+h1{
+    margin-bottom: 20px;
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Estilo base para el slider */
+.slider {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100px;
+    height: 25px;
+    background: #ccc;
+    border-radius: 12.5px;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilo para la bola del slider */
+.slider::-webkit-slider-thumb,
+.slider::-moz-range-thumb {
+    width: 35px;
+    height: 35px;
+    background: white;
+    border-radius: 50%;
+    border: 2px solid #999;
+    transition: transform 0.8s ease;
+    position: absolute;
+    top: -5px;
+}
+
+/* Estado cuando el slider tiene el valor 1 */
+.slider.active {
+    background-color: #1E90FF;
+}
+
+.slider.active::-webkit-slider-thumb,
+.slider.active::-moz-range-thumb {
+    transform: translateX(18px);
+}
+
+.elements-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.state1{
+    font-size: 1.9em;
+}
+
+.img{
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    background-position: center;
+    background-image: url(./img/icons8-diodo-led-100.png);
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 10px;
+    background-color: #222222;
+    padding: 0px;
+    margin-top: 20px;
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.8);
+    transition: box-shadow 0.6s ease;
+}
+
+.img.on{
+    background-image: url(./img/icons8-led-diode-100.png);
+    box-shadow: 0px 20px 20px 0px rgba(65, 105, 225, 0.8);
+}
